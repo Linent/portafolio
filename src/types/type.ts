@@ -20,6 +20,7 @@ export interface Project {
   short: string;
   description: string;
   tech: string[];
+  image?: string;
 }
 
 export const profile = {
@@ -82,6 +83,7 @@ export const projects: Project[] = [
     description:
       "Plataforma con flujos de aprobación por roles, panel administrativo avanzado, exportación de datos y control granular de permisos. Desarrollada con Next.js, React, HeroUI, Node.js, Express y MongoDB.",
     tech: ["Next.js", "React", "HeroUI", "Node.js", "Express", "MongoDB"],
+    image: "https://res.cloudinary.com/dhaxrwwio/image/upload/v1765473267/proyecto-fries_utq3hg.png"
   },
   {
     id: "bienestapp",
@@ -91,6 +93,7 @@ export const projects: Project[] = [
     description:
       "Sistema para asesorías académicas, agenda dinámica, integraciones con WhatsApp API y un asistente conversacional con IA (Gemini).",
     tech: ["Node.js", "MongoDB", "WhatsApp API", "Gemini", "React"],
+    image: "https://res.cloudinary.com/dhaxrwwio/image/upload/v1765473266/bienestapp_q5ed81.png"
   },
   {
     id: "kumonera",
@@ -99,6 +102,7 @@ export const projects: Project[] = [
     description:
       "Integración de la API móvil para mostrar promociones, categorías y comercios de forma dinámica en el sitio web.",
     tech: ["WordPress", "PHP", "REST API"],
+    image: "https://res.cloudinary.com/dhaxrwwio/image/upload/v1765477190/kumonera_qmyayd.png"
   },
   {
     id: "premium-sport",
@@ -108,6 +112,7 @@ export const projects: Project[] = [
     description:
       "Actualización automática de productos, creación de nuevos ítems y sincronización completa con la API interna.",
     tech: ["WordPress", "PHP", "REST API"],
+    image: "https://res.cloudinary.com/dhaxrwwio/image/upload/v1765477981/premiumSport_f9c2wo.png"
   },
   {
     id: "ecoproyecta",
@@ -116,6 +121,7 @@ export const projects: Project[] = [
     description:
       "Sitio informativo desarrollado con WordPress y Elementor para promover iniciativas ecológicas.",
     tech: ["WordPress", "Elementor"],
+    image: "https://res.cloudinary.com/dhaxrwwio/image/upload/v1765474171/Captura_de_pantalla_2025-12-11_122920_gjmja9.png"
   },
   {
     id: "sora-coworking",
@@ -124,6 +130,7 @@ export const projects: Project[] = [
     description:
       "Estructura visual moderna y adaptable con WordPress, diseñada para mostrar servicios y planes.",
     tech: ["WordPress"],
+    image: "https://res.cloudinary.com/dhaxrwwio/image/upload/v1765475183/soracoworking_dmeugc.png"
   },
 ];
 

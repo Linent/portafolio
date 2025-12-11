@@ -4,6 +4,7 @@ import { Chip } from "@heroui/chip";
 import { projects } from "@/types/type";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/utils/motion";
+import { Image } from "@heroui/react";
 
 export const PortfolioSection: FC = () => {
   return (
@@ -67,6 +68,9 @@ export const PortfolioSection: FC = () => {
               </CardHeader>
 
               <CardBody className="space-y-4 flex-grow overflow-visible">
+                <Image
+                  alt={project.name}
+                  src={project.image}/>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
