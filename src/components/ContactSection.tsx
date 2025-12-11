@@ -18,7 +18,7 @@ export const ContactSection: FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 space-y-10">
+    <section id="contact" className="py-24 space-y-10 ">
       
       {/* TÍTULO */}
       <motion.p
