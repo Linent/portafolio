@@ -1,14 +1,6 @@
 import { Icon } from "@iconify/react";
 import {
   Code,
-  Database,
-  GitBranch,
-  Globe,
-  MessageCircle,
-  Atom,
-  Boxes,
-  CircuitBoard,
-  Sparkles,
 } from "lucide-react";
 
 export const SkillIcons = {
