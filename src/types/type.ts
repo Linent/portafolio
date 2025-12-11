@@ -1,9 +1,17 @@
 import { SkillIcons } from "@/components/skill-icons";
+import {
+  Server,
+  Workflow,
+  MessagesSquare,
+  Globe,
+  TrendingUp,
+  Wrench,
+} from "lucide-react";
 
 export interface Service {
   title: string;
   description: string;
-  icon?: string;
+  icon?:  React.ComponentType<{ className?: string }>;
 }
 
 export interface Project {
@@ -16,10 +24,9 @@ export interface Project {
 
 export const profile = {
   name: "Anderson Eduardo Ochoa Peñaranda",
-  role: "Backend Developer & API Specialist",
+  role: "Backend Developer",
   description:
     "Desarrollador backend con experiencia en Node.js, Express y MongoDB, especializado en la creación de APIs REST, automatización con n8n e integración de chatbots para WhatsApp con IA. También cuento con experiencia en WordPress, SEO y administración de hosting.",
-  location: "Cúcuta, Norte de Santander - Colombia",
   email: "ochoaanderson102@gmail.com",
   phone: "+57 301 379 9160",
 };
@@ -31,31 +38,37 @@ export const services: Service[] = [
     title: "Desarrollo Backend con Node.js",
     description:
       "APIs seguras y escalables con Express, integradas con bases de datos MongoDB.",
+    icon: Server,
   },
   {
     title: "Integración de APIs y Automatización",
     description:
       "Conexión de servicios externos, sincronización de datos y flujos avanzados con n8n.",
+    icon: Workflow,
   },
   {
     title: "Chatbots para WhatsApp con IA",
     description:
       "Bots conversacionales usando WhatsApp API y modelos de IA como Gemini.",
+    icon: MessagesSquare,
   },
   {
     title: "Desarrollo y mantenimiento en WordPress",
     description:
       "Creación de funcionalidades personalizadas, integración de APIs y optimización.",
+    icon: Globe,
   },
   {
     title: "SEO y optimización web",
     description:
       "Mejoras de rendimiento, posicionamiento básico y gestión de hosting.",
+    icon: TrendingUp,
   },
   {
     title: "Soporte Técnico y Soluciones Digitales",
     description:
       "Diagnóstico, configuración de sistemas y acompañamiento tecnológico.",
+    icon: Wrench,
   },
 ];
 

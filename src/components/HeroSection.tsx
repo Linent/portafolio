@@ -1,34 +1,52 @@
 import { FC } from "react";
 import { Button } from "@heroui/button";
-import { Card, CardBody, } from "@heroui/card";
-import {Image} from "@heroui/react";
+import { Card, CardBody } from "@heroui/card";
+import { Image } from "@heroui/react";
+import { motion } from "framer-motion";
+import { fadeUp, slideInRight, staggerContainer } from "@/utils/motion";
+
 export const HeroSection: FC = () => {
   return (
     <section
       id="home"
       className="pt-28 pb-24 grid gap-12 md:grid-cols-2 items-center"
     >
-      {/* Textos */}
-      <div className="space-y-6">
-        <p className="uppercase tracking-[0.25em] text-xs text-gray-500 dark:text-gray-400">
+      {/* Textos con animación */}
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.4 }}
+        className="space-y-6"
+      >
+        <motion.p
+          variants={fadeUp}
+          className="uppercase tracking-[0.25em] text-xs text-gray-500 dark:text-gray-400"
+        >
           Bienvenido a mi mundo
-        </p>
+        </motion.p>
 
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        <motion.h1
+          variants={fadeUp}
+          className="text-4xl md:text-5xl font-bold leading-tight"
+        >
           Hola, soy{" "}
           <span className="text-pink-600 dark:text-pink-500">Anderson</span>
           <br />
           <span className="text-gray-800 dark:text-gray-200">
-            Desarrollador Backend & Especialista en APIs
+            Desarrollador Backend
           </span>
-        </h1>
+        </motion.h1>
 
-        <p className="text-gray-600 dark:text-gray-400 max-w-lg">
+        <motion.p
+          variants={fadeUp}
+          className="text-gray-600 dark:text-gray-400 max-w-lg"
+        >
           Desarrollador backend con experiencia en Node.js, Express y MongoDB,
           especializado en APIs, automatización de procesos y chatbots con IA.
-        </p>
+        </motion.p>
 
-        <div className="flex flex-wrap gap-4">
+        <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
           <Button
             radius="full"
             className="bg-pink-600 text-white hover:bg-pink-500 transition px-8 py-2"
@@ -45,27 +63,38 @@ export const HeroSection: FC = () => {
           >
             Contacto
           </Button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      {/* Tarjeta con foto */}
-      <div className="flex justify-center">
+      {/* Tarjeta con foto animada */}
+      <motion.div
+        variants={slideInRight}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex justify-center"
+      >
         <Card
           className="
             w-full max-w-sm 
             bg-gray-200 dark:bg-gray-800/60 
             border border-gray-300 dark:border-gray-700/40 
             shadow-md dark:shadow-none
+            hover:-translate-y-1 hover:shadow-lg transition-all
           "
         >
           <CardBody className="flex flex-col items-center py-10 gap-4">
-            {/* Foto */}
-
-            <Image
-              alt="HeroUI hero Image"
-              src="https://res.cloudinary.com/dhaxrwwio/image/upload/v1763317054/profile_images/o4v0sdaaei8wqtl1lenu.jpg"
-              width={200}
-            />
+            <motion.div
+              whileHover={{ scale: 1.04 }}
+              transition={{ type: "spring", stiffness: 200, damping: 12 }}
+            >
+              <Image
+                alt="Foto de perfil"
+                src="https://res.cloudinary.com/dhaxrwwio/image/upload/v1763317054/profile_images/o4v0sdaaei8wqtl1lenu.jpg"
+                width={200}
+                className="rounded-xl"
+              />
+            </motion.div>
 
             <h3 className="text-gray-800 dark:text-white font-semibold text-lg">
               Anderson Ochoa
@@ -75,7 +104,7 @@ export const HeroSection: FC = () => {
             </p>
           </CardBody>
         </Card>
-      </div>
+      </motion.div>
     </section>
   );
 };

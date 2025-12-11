@@ -1,28 +1,77 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- RESPONSIVE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + HeroUI</title>
-    <meta key="title" content="Vite + HeroUI" property="og:title" />
+
+    <!-- SEO BÁSICO -->
+    <title>Anderson Ochoa | Desarrollador Backend & APIs</title>
     <meta
-      content="Make beautiful websites regardless of your design experience."
-      property="og:description"
-    />
-    <meta
-      content="Make beautiful websites regardless of your design experience."
       name="description"
+      content="Portafolio de Anderson Ochoa, desarrollador backend especializado en Node.js, APIs, automatización y chatbots con IA."
+    />
+
+    <!-- NO INDEX (ELIMINAR PARA SEO REAL) -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+
+    <!-- FAVICONS -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://tudominio.com/" />
+
+    <!-- OPEN GRAPH (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anderson Ochoa | Desarrollador Backend" />
+    <meta
+      property="og:description"
+      content="Especialista en Node.js, Express, APIs, automatización de procesos y chatbots con IA."
+    />
+    <meta property="og:url" content="https://tudominio.com/" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dhaxrwwio/image/upload/v1763317054/profile_images/o4v0sdaaei8wqtl1lenu.jpg"
+    />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anderson Ochoa | Desarrollador Backend" />
+    <meta
+      name="twitter:description"
+      content="Portafolio profesional de desarrollo backend, APIs y automatización."
     />
     <meta
-      key="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-      name="viewport"
+      name="twitter:image"
+      content="https://res.cloudinary.com/dhaxrwwio/image/upload/v1763317054/profile_images/o4v0sdaaei8wqtl1lenu.jpg"
     />
-    <link href="/favicon.ico" rel="icon" />
+
+    <!-- SCHEMA.ORG (SEO AVANZADO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anderson Ochoa",
+        "url": "https://tudominio.com/",
+        "image": "https://res.cloudinary.com/dhaxrwwio/image/upload/v1763317054/profile_images/o4v0sdaaei8wqtl1lenu.jpg",
+        "jobTitle": "Desarrollador Backend",
+        "description": "Desarrollador backend especializado en Node.js, Express, APIs, automatización y chatbots con IA.",
+        "sameAs": [
+          "https://github.com/tuusuario",
+          "https://www.linkedin.com/in/tuusuario"
+        ]
+      }
+    </script>
+
+    <script type="module" src="/src/main.tsx"></script>
   </head>
+
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

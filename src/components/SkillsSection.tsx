@@ -1,50 +1,76 @@
 import { FC } from "react";
 import { Chip } from "@heroui/chip";
 import { skills } from "@/types/type";
+import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "@/utils/motion";
 
 export const SkillsSection: FC = () => {
   return (
     <section id="skills" className="py-24 space-y-10">
-      <p className="text-pink-600 dark:text-pink-500 text-xs uppercase tracking-[0.25em]">
+      {/* TÍTULO ANIMADO */}
+      <motion.p
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-pink-600 dark:text-pink-500 text-xs uppercase tracking-[0.25em]"
+      >
         Habilidades
-      </p>
+      </motion.p>
 
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+      <motion.h2
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-3xl md:text-4xl font-bold text-foreground"
+      >
         Tecnologías que manejo
-      </h2>
+      </motion.h2>
 
-      <div className="flex flex-wrap gap-4 pt-4">
+      {/* CHIPS CON STAGGER + FADE + SPRING */}
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="flex flex-wrap gap-4 pt-4"
+      >
         {skills.map(({ name, icon: Icon }) => (
-          <Chip
+          <motion.div
             key={name}
-            radius="lg"
-            variant="flat"
-            className="
-              h-13               /* ALTURA UNIFORME (40px) */
-              px-4
-              text-foreground    /* Cambia según tema */
-              bg-default-100     /* Cambia según tema */
-              dark:bg-default-50 /* Para modo oscuro */
-              flex items-center gap-2
-              hover:bg-default-200 dark:hover:bg-default-100
-              border border-default-200 dark:border-default-100
-              transition-all
-            "
+            variants={fadeUp}
+            whileHover={{ scale: 1.06 }}
+            transition={{ type: "spring", stiffness: 260, damping: 18 }}
           >
-            {Icon && typeof Icon === "function"
-              ? (
-                  // Try to render as a React component
-                  <Icon />
-                )
-              : (
-                  // Otherwise, render as is (could be a string, JSX, etc.)
-                  <span className="w-5 h-5 object-contain">{Icon}</span>
-                )
-            }
-            <span className="font-medium text-sm">{name}</span>
-          </Chip>
+            <Chip
+              radius="lg"
+              variant="flat"
+              className="
+                h-12
+                px-4
+                text-foreground
+                bg-default-100 
+                dark:bg-default-50
+                flex items-center gap-2
+                border border-default-200 dark:border-default-100
+                hover:bg-default-200 dark:hover:bg-default-100
+                transition-all
+              "
+            >
+              {/* ICONO */}
+              {Icon && typeof Icon === "function" ? (
+                <span className="w-5 h-5"><Icon /></span>
+              ) : (
+                <span className="w-5 h-5">{Icon}</span>
+              )}
+
+              {/* TEXTO */}
+              <span className="font-medium text-sm">{name}</span>
+            </Chip>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

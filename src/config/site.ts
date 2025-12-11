@@ -48,11 +48,4 @@ export const siteConfig = {
     },
   ],
 
-  links: {
-    github: "https://github.com/tu_usuario_github",
-    twitter: "https://twitter.com/tu_usuario",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "",
-  },
 };
