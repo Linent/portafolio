@@ -35,7 +35,7 @@ export const Navbar = () => {
         }
       `}
     >
-      {/* BRAND */}
+
       <NavbarBrand>
         <Link
           href="#home"
@@ -51,7 +51,7 @@ export const Navbar = () => {
         </Link>
       </NavbarBrand>
 
-      {/* DESKTOP */}
+
       <NavbarContent className="hidden md:flex items-center gap-8" justify="end">
         {siteConfig.navItems.map((item) => (
           <NavbarItem key={item.href}>
@@ -89,7 +89,7 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      {/* MOBILE */}
+
       <NavbarContent className="md:hidden" justify="end">
         <ThemeSwitch />
         <NavbarMenuToggle />

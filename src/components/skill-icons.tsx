@@ -10,7 +10,7 @@ export const SkillIcons = {
   rest: () => <Code size={18} />,
   whatsapp: () => <Icon icon="logos:whatsapp-icon" width="20" height="20" />,
   gemini: () => <Icon icon="logos:google-gemini" width="20" height="20" />,
-  n8n: () => <Icon icon="logos:n8n" width="20" height="20" />,
+  n8n: () => <Icon icon="devicon:n8n-wordmark" width="20" height="20" />,
   javascript: () => <Icon icon="logos:javascript" width="20" height="20" />,
   react: () => <Icon icon="logos:react" width="20" height="20" />,
   next: () => <Icon icon="logos:nextjs-icon" width="20" height="20" />,

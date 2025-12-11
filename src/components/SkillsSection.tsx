@@ -7,7 +7,7 @@ import { fadeUp, staggerContainer } from "@/utils/motion";
 export const SkillsSection: FC = () => {
   return (
     <section id="skills" className="py-24 space-y-10">
-      {/* TÍTULO ANIMADO */}
+
       <motion.p
         variants={fadeUp}
         initial="hidden"
@@ -28,7 +28,6 @@ export const SkillsSection: FC = () => {
         Tecnologías que manejo
       </motion.h2>
 
-      {/* CHIPS CON STAGGER + FADE + SPRING */}
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -58,7 +57,7 @@ export const SkillsSection: FC = () => {
                 transition-all
               "
             >
-              {/* ICONO */}
+
               {Icon && typeof Icon === "function" ? (
                 <span className="w-5 h-5"><Icon /></span>
               ) : (

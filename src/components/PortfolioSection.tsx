@@ -48,15 +48,14 @@ export const PortfolioSection: FC = () => {
             <Card
               radius="lg"
               className="
-          flex flex-col w-full
-          bg-white dark:bg-gray-900/60 
-          border border-gray-300 dark:border-gray-800
-          hover:border-pink-600/70 
-          hover:shadow-[0_0_20px_-5px_rgba(255,0,130,0.35)]
-          hover:-translate-y-1
-          transition-all
-          overflow-hidden
-        "
+              flex flex-col w-full
+              bg-white dark:bg-gray-900/60 
+              border border-gray-300 dark:border-gray-800
+              hover:border-pink-600/70 
+              hover:shadow-[0_0_20px_-5px_rgba(255,0,130,0.35)]
+              hover:-translate-y-1
+              transition-all
+              overflow-hidden"
             >
               <CardHeader className="flex flex-col gap-2">
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
@@ -68,9 +67,8 @@ export const PortfolioSection: FC = () => {
               </CardHeader>
 
               <CardBody className="space-y-4 flex-grow overflow-visible">
-                <Image
-                  alt={project.name}
-                  src={project.image}/>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <Image alt={project.name} src={project.image} />
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
@@ -87,6 +85,7 @@ export const PortfolioSection: FC = () => {
                     </Chip>
                   ))}
                 </div>
+                </a>
               </CardBody>
             </Card>
           </motion.div>

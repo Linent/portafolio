@@ -21,6 +21,7 @@ export interface Project {
   description: string;
   tech: string[];
   image?: string;
+  link?: string;
 }
 
 export const profile = {
@@ -83,7 +84,8 @@ export const projects: Project[] = [
     description:
       "Plataforma con flujos de aprobación por roles, panel administrativo avanzado, exportación de datos y control granular de permisos. Desarrollada con Next.js, React, HeroUI, Node.js, Express y MongoDB.",
     tech: ["Next.js", "React", "HeroUI", "Node.js", "Express", "MongoDB"],
-    image: "https://res.cloudinary.com/dhaxrwwio/image/upload/v1765473267/proyecto-fries_utq3hg.png"
+    image: "https://res.cloudinary.com/dhaxrwwio/image/upload/v1765473267/proyecto-fries_utq3hg.png",
+    link: "https://fries-seven.vercel.app/"
   },
   {
     id: "bienestapp",
@@ -93,7 +95,8 @@ export const projects: Project[] = [
     description:
       "Sistema para asesorías académicas, agenda dinámica, integraciones con WhatsApp API y un asistente conversacional con IA (Gemini).",
     tech: ["Node.js", "MongoDB", "WhatsApp API", "Gemini", "React"],
-    image: "https://res.cloudinary.com/dhaxrwwio/image/upload/v1765473266/bienestapp_q5ed81.png"
+    image: "https://res.cloudinary.com/dhaxrwwio/image/upload/v1765473266/bienestapp_q5ed81.png",
+    link: "https://bienestapp-frontend.vercel.app/"
   },
   {
     id: "kumonera",

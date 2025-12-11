@@ -3,24 +3,14 @@ import { Mail, Send, MessageCircle } from "lucide-react";
 import { profile } from "@/types/type";
 import { motion } from "framer-motion";
 import { slideInRight, fadeUp, staggerContainer } from "@/utils/motion";
-
+import { openWhatsApp } from "@/hooks/usePhone";
 export const ContactSection: FC = () => {
   const email = `${profile.email?.split("@")[0]}@${profile.email?.split("@")[1]}`;
 
-  const openWhatsApp = () => {
-    const message = encodeURIComponent(
-      "Hola, quiero más información sobre tus servicios."
-    );
-
-    const cleanPhone = profile.phone.replace(/\D/g, "");
-
-    window.open(`https://wa.me/${cleanPhone}?text=${message}`, "_blank");
-  };
 
   return (
     <section id="contact" className="py-24 space-y-10 ">
-      
-      {/* TÍTULO */}
+
       <motion.p
         variants={fadeUp}
         initial="hidden"
@@ -41,7 +31,7 @@ export const ContactSection: FC = () => {
         Ponte en contacto
       </motion.h2>
 
-      {/* GRID ANIMADA */}
+
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -49,15 +39,16 @@ export const ContactSection: FC = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="grid gap-10 md:grid-cols-2"
       >
-        {/* COLUMNA IZQUIERDA (fade-up) */}
-        <motion.div variants={fadeUp} className="space-y-6 text-gray-700 dark:text-gray-300">
 
+        <motion.div
+          variants={fadeUp}
+          className="space-y-6 text-gray-700 dark:text-gray-300"
+        >
           <p className="text-lg">
             Si deseas trabajar conmigo, colaborar o necesitas más información,
             puedes contactarme directamente por correo o WhatsApp.
           </p>
 
-          {/* Email */}
           <div className="flex items-center gap-3">
             <Mail className="w-5 h-5 text-pink-600 dark:text-pink-500" />
             <a
@@ -68,7 +59,7 @@ export const ContactSection: FC = () => {
             </a>
           </div>
 
-          {/* WhatsApp */}
+
           <div className="flex items-center gap-3">
             <MessageCircle className="w-5 h-5 text-pink-600 dark:text-pink-500" />
             <button
@@ -78,15 +69,11 @@ export const ContactSection: FC = () => {
               WhatsApp
             </button>
           </div>
-
         </motion.div>
 
-        {/* COLUMNA DERECHA (animación desde la derecha) */}
-        <motion.div
-          variants={slideInRight}
-          className="space-y-4"
-        >
-          {/* Botón Email */}
+
+        <motion.div variants={slideInRight} className="space-y-4">
+
           <a
             href={`mailto:${email}`}
             className="
@@ -100,7 +87,7 @@ export const ContactSection: FC = () => {
             Enviar correo
           </a>
 
-          {/* Botón WhatsApp */}
+
           <button
             onClick={openWhatsApp}
             className="

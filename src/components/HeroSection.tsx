@@ -11,7 +11,7 @@ export const HeroSection: FC = () => {
       id="home"
       className="pt-28 pb-24 grid gap-12 md:grid-cols-2 items-center"
     >
-      {/* Textos con animación */}
+
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -66,7 +66,7 @@ export const HeroSection: FC = () => {
         </motion.div>
       </motion.div>
 
-      {/* Tarjeta con foto animada */}
+
       <motion.div
         variants={slideInRight}
         initial="hidden"
@@ -93,6 +93,7 @@ export const HeroSection: FC = () => {
                 src="https://res.cloudinary.com/dhaxrwwio/image/upload/v1763317054/profile_images/o4v0sdaaei8wqtl1lenu.jpg"
                 width={200}
                 className="rounded-xl"
+                isZoomed
               />
             </motion.div>
 
